@@ -1,0 +1,66 @@
+initial_conditions:
+  sm1i: 5.
+  sm2i: 10.
+  hydroop: 0
+  kr: 1.5
+hydro:
+  c:
+  - normal
+  - 1.0
+  - .2
+  beta:
+  - normal
+  - 1.0
+  - .2
+  ks:
+  - uniform
+  - 5.
+  - 100.0
+  ku:
+  - uniform
+  - 5
+  - 100.0
+  lowercasen:
+  - normal
+  - 1.0
+  - .2
+  sm1max:
+  - uniform
+  - 200
+  - 800
+  sm2max:
+  - uniform
+  - 10
+  - 500
+snow:
+  pm:
+  - normal
+  - 0.
+  - .1
+  opg:
+  - normal
+  - .002
+  - .0004
+  t_lapse: 
+  - normal 
+  - -0.00413
+  - .002
+
+
+##### sm1max      100.00  10.00  1500.0   True  877.165515  1041.005164
+##### sm2max      100.00  10.00  1500.0  False  354.694628   354.694628
+##### ku            1.00   0.01    50.0  False   19.406212    19.406212
+##### c             1.00   0.20     1.8  False    1.560061     1.560061
+##### ks            0.01   1.00    50.0  False   22.699377    22.699377
+##### lowercasen    1.00   0.20     1.8  False    1.415470     1.415470
+##### nr            1.00   2.50     4.0  False    3.866934     3.866934
+
+# *** THERE MUST BE A 0 AFTER THE NEGATIVE SIGN IN ORDER FOR YAML TO SPIT OUT A FLOAT***
+# *** otherwise it will return a string... and pymc3 wont immediately error out....  ***
+
+
+  # opg:
+  #   - uniform
+  #   - .001
+  #   - .003
+
